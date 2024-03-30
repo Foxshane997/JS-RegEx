@@ -15,9 +15,7 @@ animals: Dog, cat
 bio: Cat ipsum dolor sit amet, exercitationem incididunt. Laborum consequuntur, error velitesse incidunt. Nostrud fugit eu, anim. Sint qui but exercitationem iure yet nesciunt. Occaecat do so ut yet nihil. Fugiat fugiat but voluptatem or velit, for aut. 
 status: Approved 
 `
-
-/* 
-
+/*
 Regular Expression 1: Phone Number 
 - Format to match: ###-###-#### 
 - Planned usage: Will be used to parse out all phone numbers in that format in any given string. The phone numbers should be saved in an array. Make sure it captures ALL phone 
@@ -31,7 +29,10 @@ Expected Output:
 
 */ 
  
-let phoneReg = /write your regex here/
+let phoneReg = (/\d{3}-\d{3}-\d{4}/g)
+let phoneSrc = sampleApp.match(phoneReg)
+console.log(phoneSrc)
+
 
 /* 
 
@@ -51,8 +52,9 @@ Expected Output:
 
 */ 
 
-let emailReg = /write your regex here/
-
+let emailReg = /\w+@[a-zA-Z]+.[a-zA-Z]/g
+let emailSrc = sampleApp.match(emailReg)
+console.log(emailSrc)
 /* 
 
 Regular Expression 3: 
@@ -67,4 +69,7 @@ Expected Output:
 
 */ 
 
-let statusReg = /write your regex here/
+let statusReg = /status:/i
+
+let statusState = sampleApp.search(statusReg)
+console.log(statusState)
